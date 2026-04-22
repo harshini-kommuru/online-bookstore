@@ -1,0 +1,384 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #eef7ff 0%, #f7fbff 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #0b1026, #111827, #1e293b);
+  color: white;
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 180px;
+}
+
+.search-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  max-width: 650px;
+  margin: 0 50px;
+}
+
+.search-box {
+  flex: 1;
+  height: 52px;
+  padding: 0 22px;
+  border: none;
+  outline: none;
+  background: #ffffff;
+  border-radius: 16px 0 0 16px;
+  font-size: 16px;
+  color: #1f2937;
+  min-width: 320px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+}
+
+.search-box::placeholder {
+  color: #6b7280;
+  font-size: 15px;
+}
+
+.search-box:focus {
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.35);
+}
+
+.search-btn {
+  height: 52px;
+  min-width: 130px;
+  padding: 0 28px;
+  border: none;
+  outline: none;
+  border-radius: 0 16px 16px 0;
+  background: linear-gradient(135deg, #4f46e5, #2563eb);
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(37, 99, 235, 0.35);
+  transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #4338ca, #1d4ed8);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  min-width: 260px;
+  justify-content: flex-end;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #7ea6ff;
+}
+
+.container {
+  width: 100%;
+  max-width: 1450px;
+  margin: auto;
+  padding: 45px 50px 60px;
+}
+
+.container h1 {
+  font-size: 64px;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.subtitle {
+  font-size: 24px;
+  color: #64748b;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 42px;
+  color: #111827;
+  margin-bottom: 30px;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.book-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 18px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.book-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 38px rgba(37, 99, 235, 0.18);
+}
+
+.badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: linear-gradient(135deg, #ff7b72, #ff5f6d);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  z-index: 2;
+  box-shadow: 0 6px 16px rgba(255, 95, 109, 0.35);
+}
+
+.book-image {
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+  border-radius: 20px;
+  background: #f2f8ff;
+  padding: 16px;
+  margin-bottom: 18px;
+}
+
+.book-card h3 {
+  font-size: 20px;
+  line-height: 1.35;
+  margin: 0 0 8px;
+  color: #1f2937;
+  min-height: 56px;
+}
+
+.author {
+  color: #6b7280;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.star {
+  font-size: 18px;
+}
+
+.star.full {
+  color: #f4b400;
+}
+
+.star.half {
+  color: #f4b400;
+  opacity: 0.55;
+}
+
+.star.empty {
+  color: #d1d5db;
+}
+
+.rating-number {
+  margin-left: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #7c5a00;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: 800;
+  color: #111827;
+  margin-top: auto;
+  margin-bottom: 18px;
+}
+
+.book-card button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #111827, #3b82f6);
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-card button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #3b82f6, #111827);
+}
+
+.bottom-banner {
+  margin-top: 55px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.banner-box {
+  border-radius: 26px;
+  padding: 34px 22px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.banner-box:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.banner-icon {
+  font-size: 42px;
+  margin-bottom: 14px;
+}
+
+.banner-box h3 {
+  margin: 0 0 10px;
+  font-size: 32px;
+}
+
+.banner-box p {
+  margin: 0;
+  font-size: 18px;
+  opacity: 0.95;
+}
+
+.purple {
+  background: linear-gradient(135deg, #5b2be0, #7d5cff);
+}
+
+.blue {
+  background: linear-gradient(135deg, #0ea5e9, #2563eb);
+}
+
+.orange {
+  background: linear-gradient(135deg, #ff8a00, #ffb347);
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 18px 24px;
+  }
+
+  .search-section {
+    order: 3;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .container {
+    padding: 35px 24px;
+  }
+
+  .container h1 {
+    font-size: 46px;
+  }
+
+  .books-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 14px 16px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .search-section {
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  .search-box {
+    min-width: 0;
+    font-size: 14px;
+    height: 48px;
+  }
+
+  .search-btn {
+    min-width: 100px;
+    height: 48px;
+    font-size: 15px;
+  }
+
+  .container h1 {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .book-card {
+    min-height: auto;
+  }
+
+  .bottom-banner {
+    grid-template-columns: 1fr;
+  }
+}

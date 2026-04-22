@@ -1,0 +1,376 @@
+/* src/pages/Home.css */
+
+.home-page {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65)),
+    url("../../public/images/home-bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 0;
+}
+
+.navbar {
+  width: 100%;
+  background: rgba(10, 15, 35, 0.96);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 28px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+
+.hamburger-btn {
+  width: 54px;
+  height: 54px;
+  border: none;
+  border-radius: 18px;
+  background: #ffffff;
+  color: #111;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.hamburger-menu {
+  position: absolute;
+  top: 72px;
+  left: 0;
+  background: rgba(10, 15, 35, 0.97);
+  border-radius: 20px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 220px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.hamburger-menu a {
+  text-decoration: none;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.hamburger-menu a:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.search-box {
+  flex: 1;
+  max-width: 520px;
+  margin: 0 28px;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  z-index: 2;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 16px 20px 16px 52px;
+  border: none;
+  border-radius: 40px;
+  outline: none;
+  font-size: 17px;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.nav-links {
+  display: flex;
+  gap: 14px;
+}
+
+.nav-btn {
+  border: none;
+  text-decoration: none;
+  color: white;
+  padding: 14px 22px;
+  border-radius: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  transform: translateY(-2px);
+}
+
+.cart-btn {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+}
+
+.orders-btn {
+  background: linear-gradient(90deg, #7f7fd5, #4a00e0);
+}
+
+.logout-btn {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+}
+
+.welcome-banner {
+  width: 92%;
+  margin: 30px auto 20px;
+  padding: 45px 20px;
+  border-radius: 30px;
+  background: rgba(0, 183, 255, 0.75);
+  text-align: center;
+  color: white;
+  backdrop-filter: blur(5px);
+}
+
+.welcome-banner h1 {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.welcome-banner p {
+  font-size: 22px;
+}
+
+.banner-slider {
+  width: 92%;
+  margin: 0 auto 30px;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+}
+
+.banner-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.dots {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.6);
+}
+
+.active-dot {
+  background: #00c6ff;
+}
+
+.section-title {
+  margin: 30px 40px 10px;
+  font-size: 42px;
+  color: #1b2742;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  padding: 20px 40px 60px;
+}
+
+.book-card {
+  background: rgba(255,255,255,0.92);
+  border-radius: 24px;
+  padding: 22px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  backdrop-filter: blur(8px);
+  transition: 0.3s;
+}
+
+.book-card:hover {
+  transform: translateY(-8px);
+}
+
+.book-image {
+  width: 100%;
+  height: 270px;
+  object-fit: contain;
+  border-radius: 18px;
+  margin-bottom: 18px;
+}
+
+.book-card h3 {
+  font-size: 28px;
+  color: #17223b;
+  margin-bottom: 10px;
+}
+
+.book-card p {
+  color: #666;
+  margin-bottom: 14px;
+}
+
+.book-card h4 {
+  font-size: 30px;
+  color: #0099ff;
+  margin-bottom: 18px;
+}
+
+.add-btn {
+  width: 100%;
+  border: none;
+  border-radius: 16px;
+  padding: 14px;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
+}
+
+.qty-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.qty-box button {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 10px;
+  background: #1e3c72;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.qty-box span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.no-books {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 28px;
+  color: #17223b;
+  padding: 60px 0;
+}
+
+.footer {
+  width: 100%;
+  margin: 60px 0 0;
+  background: linear-gradient(90deg, rgba(15,35,95,0.96), rgba(30,80,200,0.92));
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px 60px;
+  box-sizing: border-box;
+  border-radius: 0;
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.footer-section {
+  min-width: 220px;
+}
+
+.footer-section h3 {
+  margin-bottom: 16px;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.footer-section p,
+.footer-section a {
+  display: block;
+  margin-bottom: 10px;
+  color: #dbe7ff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-section a:hover {
+  color: #4fc3ff;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 14px;
+  }
+
+  .search-box {
+    order: 3;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .welcome-banner h1 {
+    font-size: 34px;
+  }
+
+  .welcome-banner p {
+    font-size: 18px;
+  }
+
+  .banner-image {
+    height: 220px;
+  }
+
+  .section-title {
+    font-size: 32px;
+    margin-left: 20px;
+  }
+
+  .books-grid {
+    padding: 20px;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 30px 25px;
+    gap: 25px;
+  }
+}
